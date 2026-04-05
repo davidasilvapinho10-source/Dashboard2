@@ -1,0 +1,14 @@
+{
+  "name": "dashboard2-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["client", "server", "shared"],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace server run dev\" \"npm --workspace client run dev\"",
+    "build": "npm run -ws build",
+    "typecheck": "npm run -ws typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
